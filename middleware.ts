@@ -7,6 +7,7 @@ export function middleware(req: NextRequest) {
   console.log("middleware token");
 
   if (!token) {
+    console.log("middleware token", req.cookies.getAll());
     console.log("No token found, redirecting to login");
     return NextResponse.redirect(new URL("/login", req.url));
   }
