@@ -45,7 +45,7 @@ export function LoginForm({
       console.log("Login successful:");
       
       // Redirect to landing page after successful login
-      redirect("/landing");
+      router.push("/landing");
     } else {
       const data = await response.json();
       setError(data.message || "Login failed. Please try again.");
