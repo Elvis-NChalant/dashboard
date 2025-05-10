@@ -54,7 +54,7 @@ export default function JobTablePage() {
   // Fetch data from backend on page load
   useEffect(() => {
     const fetchEntries = async () => {
-      const response = await fetch("http://52.66.238.110:8080/get-table?table=C");
+      const response = await fetch("http://localhost:8080/get-table?table=C");
       if (response.ok) {
         const data = await response.json();
         setEntries(data);
@@ -96,7 +96,7 @@ export default function JobTablePage() {
       setEditIndex(null);
     } else {
       // Send the new entry to the backend
-      const response = await fetch("http://52.66.238.110:8080/add-entry", {
+      const response = await fetch("http://localhost:8080/add-entry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

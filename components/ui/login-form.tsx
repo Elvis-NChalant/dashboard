@@ -27,7 +27,7 @@ export function LoginForm({
     e.preventDefault();
 
     // Send login request to the Go backend
-    const response = await fetch("http://52.66.238.110:8080/login", {
+    const response = await fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
